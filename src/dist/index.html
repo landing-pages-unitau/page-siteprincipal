@@ -2,299 +2,271 @@
 <html lang="pt-br">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0"/>
+  <meta name="theme-color" content="#0a5a1c"/>
 
-  <title>Vale Web Solutions | Landing Pages & Automação</title>
+  <title>Vale Web Solutions | Landing Pages & Manutenção</title>
 
-  <!-- FAVICON -->
   <link rel="icon" type="image/x-icon" href="img/logo-titulo.ico">
 
-  <!-- GOOGLE FONTS -->
-  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,700;1,9..40,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
 
-  <!-- FONT AWESOME -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
-  />
-
-  <!-- CSS -->
   <link rel="stylesheet" href="assets/style.css">
 </head>
 
 <body>
 
 <!-- NAVBAR -->
-<nav class="navbar" id="navbar">
+<nav class="navbar" id="navbar" role="navigation" aria-label="Menu principal">
 
-  <a href="#" class="nav-logo">
-    <img src="img/vale-web.png" alt="Vale Web Solutions">
+  <a href="#inicio" class="nav-logo" aria-label="Vale Web Solutions - Início">
+    <img src="img/vale-web.png" alt="Vale Web Solutions" width="170" height="auto">
   </a>
 
-  <ul class="nav-links" id="navLinks">
+  <ul class="nav-links" id="navLinks" role="list">
     <li><a href="#inicio">Início</a></li>
     <li><a href="#servicos">Serviços</a></li>
     <li><a href="#sobre">Sobre</a></li>
     <li><a href="#contato">Contato</a></li>
   </ul>
 
-  <button class="hamburger" id="hamburger">
-    <span></span>
-    <span></span>
-    <span></span>
+  <a href="mailto:contato@valewebsolutions.com.br" class="btn-email" aria-label="Enviar e-mail">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <rect x="2" y="4" width="20" height="16" rx="2"/>
+      <path d="m2 7 10 7 10-7"/>
+    </svg>
+    Enviar e-mail
+  </a>
+
+  <button class="hamburger" id="hamburger" aria-label="Abrir menu" aria-expanded="false" aria-controls="navLinks">
+    <span aria-hidden="true"></span>
+    <span aria-hidden="true"></span>
+    <span aria-hidden="true"></span>
   </button>
 
 </nav>
 
+<!-- Overlay do menu mobile -->
+<div class="nav-overlay" id="navOverlay" aria-hidden="true"></div>
+
 <!-- HERO -->
-<section class="hero" id="inicio">
+<section id="inicio" aria-label="Apresentação">
+<div class="hero">
 
   <div class="hero-left">
 
-    <div class="hero-badge">
-      <i class="fa-solid fa-bolt"></i>
+    <div class="hero-badge" aria-label="Slogan">
+      <i class="fa-solid fa-bolt" aria-hidden="true"></i>
       Soluções digitais para negócios locais
     </div>
 
     <h1 class="hero-title">
-      Criamos landing pages que ajudam
-      sua empresa a <span class="highlight">crescer no digital</span>
+      Criamos landing pages que ajudam sua empresa a
+      <span class="highlight">crescer no digital</span>
     </h1>
 
     <p class="hero-desc">
-      A Vale Web Solutions está iniciando sua trajetória ajudando empresas,
-      profissionais e negócios locais a terem presença digital profissional
-      através de landing pages e manutenção de sites.
+      A Vale Web Solutions ajuda empresas, profissionais e negócios locais
+      a terem presença digital profissional através de landing pages modernas
+      e manutenção de sites.
     </p>
 
     <div class="hero-ctas">
-
       <a href="#contato" class="btn-primary">
+        <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
         Solicitar orçamento
       </a>
-
       <a href="#servicos" class="btn-outline">
         Conhecer serviços
       </a>
-
     </div>
 
-    <!-- FEATURES -->
-    <div class="hero-features">
+    <div class="hero-features" aria-label="Destaques">
 
       <div class="feat-item">
-
-        <div class="feat-icon">
+        <div class="feat-icon" aria-hidden="true">
           <i class="fa-solid fa-window-maximize"></i>
         </div>
-
         <div class="feat-text">
           <strong>Landing Pages</strong>
           <span>Páginas modernas focadas em conversão</span>
         </div>
-
       </div>
 
-     
-
+      <div class="feat-item">
+        <div class="feat-icon" aria-hidden="true">
+          <i class="fa-solid fa-mobile-screen"></i>
+        </div>
+        <div class="feat-text">
+          <strong>100% Responsivo</strong>
+          <span>Funciona perfeitamente em qualquer dispositivo</span>
+        </div>
       </div>
 
-
+      <div class="feat-item">
+        <div class="feat-icon" aria-hidden="true">
+          <i class="fa-solid fa-headset"></i>
+        </div>
+        <div class="feat-text">
+          <strong>Suporte próximo</strong>
+          <span>Atendimento humanizado durante todo o projeto</span>
+        </div>
+      </div>
 
     </div>
 
   </div>
 
   <!-- MOCKUP -->
-  <div class="hero-visual">
-
+  <div class="hero-visual" aria-hidden="true">
     <div class="devices-mockup">
-
       <div class="laptop-frame">
-
-        <div class="laptop-screen image-screen">
-
-          <img
-            src="img/fundo.png"
-            alt="Vale Web Solutions"
-            class="mockup-img"
-          >
-
+        <div class="laptop-screen">
+          <img src="img/fundo.png" alt="" class="mockup-img" loading="eager">
         </div>
-
       </div>
-
       <div class="laptop-base"></div>
-
     </div>
-
   </div>
 
+</div>
 </section>
 
 <!-- SERVICES -->
-<section class="section" id="servicos">
+<section id="servicos" aria-label="Serviços">
+<div class="section">
 
-  <div class="section-label">
-    Nossos Serviços
-  </div>
+  <span class="section-label">Nossos Serviços</span>
 
   <h2 class="section-title">
     Soluções web para começar ou evoluir sua presença digital
   </h2>
 
   <p class="section-desc">
-    Trabalhamos com soluções modernas para empresas que desejam
-    conquistar mais clientes pela internet.
+    Trabalhamos com soluções modernas para empresas que desejam conquistar mais clientes pela internet.
   </p>
 
   <div class="services-grid">
 
-    <!-- LANDING PAGE -->
     <div class="service-card">
-
-      <div class="service-icon-wrap">
+      <div class="service-icon-wrap" aria-hidden="true">
         <i class="fa-solid fa-laptop-code"></i>
       </div>
-
       <h3>Landing Pages</h3>
-
       <p>
         Desenvolvemos páginas profissionais para divulgar serviços,
         captar clientes e fortalecer sua marca.
       </p>
-
-      <a href="#contato" class="service-link">
-        Solicitar serviço →
-      </a>
-
+      <a href="#contato" class="service-link">Solicitar serviço →</a>
     </div>
 
-    <!-- MANUTENÇÃO -->
     <div class="service-card">
-
-      <div class="service-icon-wrap">
+      <div class="service-icon-wrap" aria-hidden="true">
         <i class="fa-solid fa-screwdriver-wrench"></i>
       </div>
-
       <h3>Manutenção de Sites</h3>
-
       <p>
         Atualizações, melhorias, correções e suporte para manter
         seu site funcionando corretamente.
       </p>
+      <a href="#contato" class="service-link">Solicitar serviço →</a>
+    </div>
 
-      <a href="#contato" class="service-link">
-        Solicitar serviço →
-      </a>
-
+    <div class="service-card">
+      <div class="service-icon-wrap" aria-hidden="true">
+        <i class="fa-solid fa-robot"></i>
+      </div>
+      <h3>Automação</h3>
+      <p>
+        Automatize processos repetitivos e ganhe mais tempo para
+        focar no crescimento do seu negócio.
+      </p>
+      <a href="#contato" class="service-link">Solicitar serviço →</a>
     </div>
 
   </div>
 
+</div>
 </section>
 
-<section class="portfolio-slider">
+<!-- PORTFOLIO SLIDER -->
+<section aria-label="Portfólio">
+<div class="portfolio-slider">
 
-  <div class="section-label">
-    Exemplos
-  </div>
+  <span class="section-label">Exemplos</span>
 
-  <h2 class="section-title">
-    Alguns modelos de Landing Pages
-  </h2>
+  <h2 class="section-title">Alguns modelos de Landing Pages</h2>
 
   <p class="section-desc">
     Exemplos de layouts modernos para diferentes tipos de negócio.
   </p>
 
-  <div class="slider-container">
+  <div class="slider-wrapper">
 
-    <button class="slider-btn prev">
-      ❮
-    </button>
-
-    <div class="slider-track">
-
-      <img src="img/landing1.jpg" alt="">
-      <img src="img/landing2.jpg" alt="">
-      <img src="img/landing3.jpg" alt="">
-      <img src="img/landing4.jpg" alt="">
-
+    <div class="slider-container">
+      <div class="slider-track" id="sliderTrack">
+        <img src="img/landing1.png" alt="Exemplo de Landing Page 1" loading="lazy">
+        <img src="img/landing2.png" alt="Exemplo de Landing Page 2" loading="lazy">
+        <img src="img/landing3.png" alt="Exemplo de Landing Page 3" loading="lazy">
+        <img src="img/landing4.png" alt="Exemplo de Landing Page 4" loading="lazy">
+      </div>
     </div>
 
-    <button class="slider-btn next">
-      ❯
-    </button>
+    <button class="slider-btn prev" aria-label="Imagem anterior">&#10094;</button>
+    <button class="slider-btn next" aria-label="Próxima imagem">&#10095;</button>
 
   </div>
 
+  <div class="slider-dots" id="sliderDots" aria-label="Navegação do slider"></div>
+
+</div>
 </section>
 
 <!-- STATS -->
-<section class="stats-bar">
+<section aria-label="Números">
+<div class="stats-bar">
 
   <div class="stat-item">
-
-    <div class="stat-icon">
-      <i class="fa-solid fa-rocket"></i>
-    </div>
-
+    <div class="stat-icon" aria-hidden="true"><i class="fa-solid fa-rocket"></i></div>
     <span class="stat-num">100%</span>
     <span class="stat-label">Projetos personalizados</span>
-
   </div>
 
   <div class="stat-item">
-
-    <div class="stat-icon">
-      <i class="fa-solid fa-headset"></i>
-    </div>
-
+    <div class="stat-icon" aria-hidden="true"><i class="fa-solid fa-headset"></i></div>
     <span class="stat-num">Suporte</span>
     <span class="stat-label">Atendimento próximo e humanizado</span>
-
   </div>
 
   <div class="stat-item">
-
-    <div class="stat-icon">
-      <i class="fa-solid fa-mobile-screen"></i>
-    </div>
-
+    <div class="stat-icon" aria-hidden="true"><i class="fa-solid fa-mobile-screen"></i></div>
     <span class="stat-num">Responsivo</span>
     <span class="stat-label">Sites adaptados para celular</span>
-
   </div>
 
   <div class="stat-item">
-
-    <div class="stat-icon">
-      <i class="fa-solid fa-lock"></i>
-    </div>
-
+    <div class="stat-icon" aria-hidden="true"><i class="fa-solid fa-lock"></i></div>
     <span class="stat-num">Seguro</span>
     <span class="stat-label">Proteção e estabilidade</span>
-
   </div>
 
+</div>
 </section>
 
 <!-- SOBRE -->
-<section class="section" id="sobre">
+<section id="sobre" aria-label="Sobre nós">
+<div class="section">
 
   <div class="about-grid">
 
     <div class="about-img-wrap">
-
       <div class="about-card-main">
 
-        <span class="about-badge-float">
-           Vale Web Solutions
-        </span>
+        <span class="about-badge-float">Vale Web Solutions</span>
 
         <h3>
-          Estamos começando nossa trajetória no mercado digital
+          Estamos começando nossa trajetória no <span>mercado digital</span>
         </h3>
 
         <p>
@@ -302,36 +274,33 @@
           uma presença digital moderna, profissional e acessível.
         </p>
 
-   
-
         <div class="about-mini-cards">
-
           <div class="about-mini">
             <strong>Sites</strong>
             <span>Modernos e responsivos</span>
           </div>
-
           <div class="about-mini">
             <strong>Suporte</strong>
             <span>Atendimento humanizado</span>
           </div>
-
+          <div class="about-mini">
+            <strong>Rápido</strong>
+            <span>Performance otimizada</span>
+          </div>
+          <div class="about-mini">
+            <strong>Seguro</strong>
+            <span>Proteção e estabilidade</span>
+          </div>
         </div>
 
       </div>
-
     </div>
 
-    <!-- RIGHT -->
     <div class="about-content">
 
-      <div class="section-label">
-        Diferenciais
-      </div>
+      <span class="section-label">Diferenciais</span>
 
-      <h2>
-        O que entregamos para sua empresa?
-      </h2>
+      <h2>O que entregamos para <span>sua empresa?</span></h2>
 
       <p>
         Trabalhamos com foco em qualidade, organização visual
@@ -341,55 +310,35 @@
       <div class="diferenciais-list">
 
         <div class="dif-item">
-
-          <div class="dif-num">1</div>
-
+          <div class="dif-num" aria-hidden="true">1</div>
           <div>
             <strong>Design moderno</strong>
-            <span>
-              Layout profissional e alinhado com o mercado atual.
-            </span>
+            <p>Layout profissional e alinhado com o mercado atual.</p>
           </div>
-
         </div>
 
         <div class="dif-item">
-
-          <div class="dif-num">2</div>
-
+          <div class="dif-num" aria-hidden="true">2</div>
           <div>
             <strong>Atendimento próximo</strong>
-            <span>
-              Comunicação clara e acompanhamento do projeto.
-            </span>
+            <p>Comunicação clara e acompanhamento do projeto.</p>
           </div>
-
         </div>
 
         <div class="dif-item">
-
-          <div class="dif-num">3</div>
-
+          <div class="dif-num" aria-hidden="true">3</div>
           <div>
             <strong>Sites rápidos</strong>
-            <span>
-              Performance otimizada para melhorar a experiência do usuário.
-            </span>
+            <p>Performance otimizada para melhorar a experiência do usuário.</p>
           </div>
-
         </div>
 
         <div class="dif-item">
-
-          <div class="dif-num">4</div>
-
+          <div class="dif-num" aria-hidden="true">4</div>
           <div>
             <strong>Automação inteligente</strong>
-            <span>
-              Processos automatizados para reduzir tarefas repetitivas.
-            </span>
+            <p>Processos automatizados para reduzir tarefas repetitivas.</p>
           </div>
-
         </div>
 
       </div>
@@ -398,18 +347,16 @@
 
   </div>
 
+</div>
 </section>
 
 <!-- CONTATO -->
-<section class="section" id="contato">
+<section id="contato" aria-label="Contato">
+<div class="section">
 
-  <div class="section-label">
-    Contato
-  </div>
+  <span class="section-label">Contato</span>
 
-  <h2 class="section-title">
-    Vamos conversar?
-  </h2>
+  <h2 class="section-title">Vamos conversar?</h2>
 
   <p class="section-desc">
     Entre em contato e solicite um orçamento sem compromisso.
@@ -417,12 +364,9 @@
 
   <div class="contact-wrap">
 
-    <!-- INFO -->
     <div class="contact-info">
 
-      <h2>
-        Fale com a Vale Web Solutions
-      </h2>
+      <h2>Fale com a <span>Vale Web Solutions</span></h2>
 
       <p>
         Estamos disponíveis para entender sua ideia
@@ -431,35 +375,15 @@
 
       <div class="contact-channels">
 
-        <a
-          href="https://wa.me/5500000000000"
-          target="_blank"
-          class="channel"
-        >
-
-         
-      
-
-        </a>
-
-        <a
-
-          href="mailto:contato@valewebsolutions.com.br"
-          class="channel"
-        >
-
-          <div class="channel-icon">
+        <a href="mailto:contato@valewebsolutions.com.br" class="channel" aria-label="E-mail">
+          <div class="channel-icon" aria-hidden="true">
             <i class="fa-solid fa-envelope"></i>
           </div>
-
           <div>
             <strong>E-mail</strong>
             <span>contato@valewebsolutions.com.br</span>
           </div>
-
         </a>
-
-   
 
       </div>
 
@@ -469,40 +393,38 @@
     <div class="contact-form">
 
       <div class="form-row">
-
         <div class="form-group">
-          <label>Nome *</label>
-          <input type="text" placeholder="Seu nome">
+          <label for="nome">Nome *</label>
+          <input id="nome" type="text" placeholder="Seu nome" autocomplete="name" required>
         </div>
-
+        <div class="form-group">
+          <label for="telefone">Telefone</label>
+          <input id="telefone" type="tel" placeholder="(00) 00000-0000" autocomplete="tel">
+        </div>
       </div>
 
       <div class="form-group">
-        <label>E-mail *</label>
-        <input type="email" placeholder="seu@email.com">
+        <label for="email">E-mail *</label>
+        <input id="email" type="email" placeholder="seu@email.com" autocomplete="email" required>
       </div>
 
       <div class="form-group">
-
-        <label>Serviço</label>
-
-        <select>
-          <option>Selecione um serviço</option>
-          <option>Landing Page</option>
-          <option>Manutenção de Site</option>
+        <label for="servico">Serviço</label>
+        <select id="servico">
+          <option value="">Selecione um serviço</option>
+          <option value="landing">Landing Page</option>
+          <option value="manutencao">Manutenção de Site</option>
+          <option value="automacao">Automação</option>
         </select>
-
       </div>
 
       <div class="form-group">
-
-        <label>Mensagem</label>
-
-        <textarea placeholder="Conte sobre seu projeto"></textarea>
-
+        <label for="mensagem">Mensagem</label>
+        <textarea id="mensagem" placeholder="Conte sobre seu projeto"></textarea>
       </div>
 
-      <button class="btn-submit">
+      <button type="submit" class="btn-submit" id="btnSubmit">
+        <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
         Enviar mensagem
       </button>
 
@@ -510,83 +432,63 @@
 
   </div>
 
+</div>
 </section>
 
 <!-- FOOTER -->
-<footer>
+<footer role="contentinfo">
 
   <div class="footer-grid">
 
     <div class="footer-brand">
-
-      <span class="footer-logo">
-        Vale Web Solutions
-      </span>
-
+      <span class="footer-logo">Vale Web <span>Solutions</span></span>
       <p>
         Soluções web modernas para empresas que desejam
         fortalecer sua presença digital.
       </p>
-
     </div>
 
     <div class="footer-col">
-
       <h4>Navegação</h4>
-
       <ul>
         <li><a href="#inicio">Início</a></li>
         <li><a href="#servicos">Serviços</a></li>
         <li><a href="#sobre">Sobre</a></li>
         <li><a href="#contato">Contato</a></li>
       </ul>
-
     </div>
 
     <div class="footer-col">
-
       <h4>Serviços</h4>
-
       <ul>
-        <li><a href="#">Landing Pages</a></li>
-        <li><a href="#">Manutenção</a></li>
+        <li><a href="#servicos">Landing Pages</a></li>
+        <li><a href="#servicos">Manutenção</a></li>
+        <li><a href="#servicos">Automação</a></li>
       </ul>
-
     </div>
 
     <div class="footer-col">
-
       <h4>Contato</h4>
-
       <ul>
-
-     
-
+       
         <li>
           <a href="mailto:contato@valewebsolutions.com.br">
             contato@valewebsolutions.com.br
           </a>
         </li>
-
-    
       </ul>
-
     </div>
 
   </div>
 
   <div class="footer-bottom">
-    <p>
-      © 2025 Vale Web Solutions. Todos os direitos reservados.
-    </p>
+    <p>© 2026 Vale Web Solutions. Todos os direitos reservados.</p>
   </div>
 
 </footer>
 
 
 
-<!-- JS -->
 <script src="js/home.js"></script>
-
 </body>
 </html>
